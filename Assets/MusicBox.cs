@@ -13,7 +13,8 @@ public class MusicBox : MonoBehaviour
     [Tooltip( "Time beforde decrementing volume" )]
     public float decayInterval = 1f;
 
-    [Header("Setup")]
+    [Header( "Setup" )]
+    [SerializeField] SpriteRenderer[] m_bars;
     [SerializeField] AudioSource m_audioSource;
     [SerializeField] Color m_onColor;
     [SerializeField] Color m_offColor;
@@ -24,11 +25,19 @@ public class MusicBox : MonoBehaviour
     void Start()
     {
         m_audioSource.volume = 0f;
+
+        foreach ( Transform child in transform )
+        {
+            child.gameObject.GetComponent<SpriteRenderer>();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        UpdateVolumeBars();
+
         m_chrono += Time.deltaTime;
 
         if( m_chrono >= decayInterval )
@@ -42,5 +51,22 @@ public class MusicBox : MonoBehaviour
     {
         m_audioSource.volume += volumeIncrement;
         m_chrono = 0f;
+    }
+
+    private void UpdateVolumeBars()
+    {
+        for ( int i = 0; i < m_bars.Length; i++ )
+        {
+            float step = i / (float) m_bars.Length;
+
+            if( m_audioSource.volume > step )
+            {
+                m_bars[ i ].color = m_onColor;
+            }
+            else
+            {
+                m_bars[ i ].color = m_offColor;
+            }
+        }
     }
 }

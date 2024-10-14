@@ -822,8 +822,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volumeIncrement: 0.02
-  volumeDecay: 0.02
+  volumeDecay: 0.2
   decayInterval: 1
+  m_bars:
+  - {fileID: 1528781792}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 706126286}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 2036742611}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 1933625821}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 1677901657}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   m_audioSource: {fileID: 1875352712}
   m_onColor: {r: 0.8867924, g: 0.8867924, b: 0.8867924, a: 1}
   m_offColor: {r: 0.254717, g: 0.254717, b: 0.254717, a: 1}
