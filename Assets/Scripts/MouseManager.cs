@@ -25,7 +25,9 @@ public class MouseManager : MonoBehaviour
 
         if ( objectToMove != null )
         {
-            objectToMove.position = Camera.main.ScreenToWorldPoint( pointerPosition ) + Vector3.forward * 10f;
+            Vector3 worldPos = Camera.main.ScreenToWorldPoint( pointerPosition );
+            worldPos.z = 0f;
+            objectToMove.position = worldPos;
         }
     }
 
