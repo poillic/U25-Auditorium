@@ -173,7 +173,19 @@ MonoBehaviour:
     m_ActionId: 3ed9274a-b226-4b63-8e36-d603ce81ad07
     m_ActionName: Player/Look[/Mouse/delta]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1623999534}
+        m_TargetAssemblyTypeName: MouseManager, Assembly-CSharp
+        m_MethodName: OnPointerPressed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 27f4412b-d3e0-4c02-9222-b519489f1d27
     m_ActionName: Player/Fire[/Mouse/leftButton,/Mouse/press]
   - m_PersistentCalls:
@@ -326,7 +338,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.86
+  m_Radius: 1.4
 --- !u!4 &181985542
 Transform:
   m_ObjectHideFlags: 0
@@ -336,7 +348,7 @@ Transform:
   m_GameObject: {fileID: 181985539}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5026177, y: 0.9573613, z: -0.06379148}
+  m_LocalPosition: {x: -1.062, y: 1.766, z: -0.06379148}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -356,7 +368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _segmentCount: 32
-  _radius: 0.81
+  _radius: 1.35
   _colliderMargin: 0
 --- !u!120 &181985544
 LineRenderer:
@@ -401,39 +413,39 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 0.15802316, y: 0.79443604, z: 0}
-  - {x: 0.3099736, y: 0.7483424, z: 0}
-  - {x: 0.4500119, y: 0.67349035, z: 0}
-  - {x: 0.57275647, y: 0.57275647, z: 0}
-  - {x: 0.67349035, y: 0.4500119, z: 0}
-  - {x: 0.7483424, y: 0.30997357, z: 0}
-  - {x: 0.79443604, y: 0.1580232, z: 0}
-  - {x: 0.81, y: -0.000000035406224, z: 0}
-  - {x: 0.79443604, y: -0.15802316, z: 0}
-  - {x: 0.74834245, y: -0.30997354, z: 0}
-  - {x: 0.6734904, y: -0.45001185, z: 0}
-  - {x: 0.57275647, y: -0.57275647, z: 0}
-  - {x: 0.45001185, y: -0.6734904, z: 0}
-  - {x: 0.30997363, y: -0.7483424, z: 0}
-  - {x: 0.15802315, y: -0.7944361, z: 0}
-  - {x: -0.00000007081245, y: -0.81, z: 0}
-  - {x: -0.1580231, y: -0.7944361, z: 0}
-  - {x: -0.30997357, y: -0.7483424, z: 0}
-  - {x: -0.45001194, y: -0.67349035, z: 0}
-  - {x: -0.5727564, y: -0.5727565, z: 0}
-  - {x: -0.6734903, y: -0.45001206, z: 0}
-  - {x: -0.7483424, y: -0.3099737, z: 0}
-  - {x: -0.79443604, y: -0.15802321, z: 0}
-  - {x: -0.81, y: 0.0000000096591535, z: 0}
-  - {x: -0.79443604, y: 0.15802324, z: 0}
-  - {x: -0.74834234, y: 0.30997372, z: 0}
-  - {x: -0.67349046, y: 0.45001176, z: 0}
-  - {x: -0.5727566, y: 0.5727564, z: 0}
-  - {x: -0.45001194, y: 0.67349035, z: 0}
-  - {x: -0.30997357, y: 0.74834245, z: 0}
-  - {x: -0.15802309, y: 0.7944361, z: 0}
-  - {x: 0.0000001416249, y: 0.81, z: 0}
-  - {x: 0.15802298, y: 0.7944361, z: 0}
+  - {x: 0.26337194, y: 1.3240601, z: 0}
+  - {x: 0.51662266, y: 1.2472373, z: 0}
+  - {x: 0.75001985, y: 1.122484, z: 0}
+  - {x: 0.95459414, y: 0.95459414, z: 0}
+  - {x: 1.122484, y: 0.75001985, z: 0}
+  - {x: 1.2472373, y: 0.51662266, z: 0}
+  - {x: 1.3240601, y: 0.26337197, z: 0}
+  - {x: 1.35, y: -0.000000059010375, z: 0}
+  - {x: 1.3240601, y: -0.26337194, z: 0}
+  - {x: 1.2472374, y: -0.5166226, z: 0}
+  - {x: 1.1224841, y: -0.7500198, z: 0}
+  - {x: 0.95459414, y: -0.95459414, z: 0}
+  - {x: 0.7500198, y: -1.1224841, z: 0}
+  - {x: 0.5166227, y: -1.2472373, z: 0}
+  - {x: 0.2633719, y: -1.3240602, z: 0}
+  - {x: -0.00000011802075, y: -1.35, z: 0}
+  - {x: -0.26337186, y: -1.3240602, z: 0}
+  - {x: -0.51662266, y: -1.2472373, z: 0}
+  - {x: -0.7500199, y: -1.1224838, z: 0}
+  - {x: -0.9545941, y: -0.95459425, z: 0}
+  - {x: -1.1224838, y: -0.7500201, z: 0}
+  - {x: -1.2472373, y: -0.51662284, z: 0}
+  - {x: -1.3240601, y: -0.26337203, z: 0}
+  - {x: -1.35, y: 0.00000001609859, z: 0}
+  - {x: -1.3240601, y: 0.26337206, z: 0}
+  - {x: -1.2472373, y: 0.5166229, z: 0}
+  - {x: -1.1224841, y: 0.7500196, z: 0}
+  - {x: -0.9545943, y: 0.954594, z: 0}
+  - {x: -0.7500199, y: 1.122484, z: 0}
+  - {x: -0.51662266, y: 1.2472374, z: 0}
+  - {x: -0.26337183, y: 1.3240602, z: 0}
+  - {x: 0.0000002360415, y: 1.35, z: 0}
+  - {x: 0.26337165, y: 1.3240602, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -799,6 +811,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9c81f6bddca6fa44816421b1fac4bd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resizeCursorTex: {fileID: 2800000, guid: 3044446006d994f4cafbb545084e6e6b, type: 3}
+  moveCursorTex: {fileID: 2800000, guid: 7a9a0dd7570af2745a00bd060fbda302, type: 3}
+  layer:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!4 &1623999535
 Transform:
   m_ObjectHideFlags: 0
