@@ -47,12 +47,20 @@ public class Spawner : MonoBehaviour
         GameObject particle = Instantiate( prefabParticle );
         ReturnToPool rtp = particle.AddComponent<ReturnToPool>();
         rtp.pool = poolParticles;
+        particle.transform.position = (Vector2) transform.position +
+                                    Random.insideUnitCircle * spawnRadius;
+        particle.transform.rotation = transform.rotation;
         return particle;
     }
 
     public GameObject OnCreateItem()
     {
-        return CreateParticle();
+        GameObject particle = CreateParticle();
+        particle.transform.position = (Vector2) transform.position +
+                                    Random.insideUnitCircle * spawnRadius;
+        particle.transform.rotation = transform.rotation;
+        particle.SetActive( false );
+        return particle;
     }
 
     public void OnTakeItem( GameObject item )

@@ -28,6 +28,7 @@ public class ReturnToPool : MonoBehaviour
             rb2d = GetComponent<Rigidbody2D>();
         }
         rb2d.velocity = transform.right * 15f;
+        
     }
 
     private void OnDisable()
