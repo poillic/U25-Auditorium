@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TestCompo : MonoBehaviour
 {
-    public ScriptableVariable myVar;
     // Start is called before the first frame update
     void Start()
     {
