@@ -10,6 +10,7 @@ public class ButtonSound : MonoBehaviour, IPointerEnterHandler
 
     public void OnPointerEnter( PointerEventData eventData )
     {
+        Debug.Log( "hello ?" );
         foreach(GameObject go in eventData.hovered )
         {
             if( go.TryGetComponent<Button>(out Button btn) )

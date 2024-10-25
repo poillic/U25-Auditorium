@@ -69,4 +69,9 @@ public class MusicBox : MonoBehaviour
             }
         }
     }
+
+    public bool IsMaxVolume()
+    {
+        return m_audioSource.volume >= 0.95f;
+    }
 }
