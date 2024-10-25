@@ -9,6 +9,11 @@ public class GameData : ScriptableObject
     public int currentLevelIndex = 0;
     public List<LevelData> levels;
 
+    public void ResetIndex()
+    {
+        currentLevelIndex = 0;
+    }
+
     public void GoToLevel( int index )
     {
         currentLevelIndex = index;
@@ -23,7 +28,19 @@ public class GameData : ScriptableObject
 
     public void LoadNextLevel()
     {
+        levels[ currentLevelIndex ].unlock = true;
         currentLevelIndex++;
-        SceneManager.LoadScene( levels[ currentLevelIndex ].sceneName );
+        
+
+        if( currentLevelIndex >= levels.Count -1 )
+        {
+            SceneManager.LoadScene( "Menu" );
+        }
+        else
+        {
+            //currentLevelIndex = Mathf.Clamp( currentLevelIndex, 0, levels.Count - 1 );
+            SceneManager.LoadScene( levels[ currentLevelIndex ].sceneName );
+        }
+        //On peut aller plus loin que le dernier index du tableau
     }
 }

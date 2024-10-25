@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Level1 3
   m_EditorClassIdentifier: 
   icon: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  sceneName: Level1
+  sceneName: Level4
   levelName: sdgf
-  unlock: 1
+  unlock: 0
   highscore: 0
   time: 0
   stars: 0
